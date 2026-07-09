@@ -4,7 +4,7 @@ Projeto de modelagem e implementação de um banco de dados relacional para uma
 concessionária de veículos fictícia, contemplando cadastro de veículos, clientes,
 vendas e [ajuste conforme o escopo real].
 
-Desenvolvido em equipe [nº] pessoas como trabalho final da disciplina de Banco de
+Desenvolvido em equipe como trabalho final da disciplina de Banco de
 Dados (PUC-PR, 2025/2).
 
 ## Diagrama Entidade-Relacionamento
@@ -22,22 +22,6 @@ O schema `soy_turbo` é composto por 9 tabelas, organizadas em três blocos:
 **funcionários** (gerentes, vendedores, fretadores), **catálogo de veículos**
 (fornecedores, modelos, automóveis vendidos) e **operação comercial**
 (compradores, contratos, entrega).
-
-### Diagrama de relacionamentos
-
-```mermaid
-erDiagram
-    gerentes ||--o{ vendedores : contrata
-    gerentes ||--o{ fretadores : contrata
-    gerentes ||--o{ fornecedores : negocia
-    fornecedores ||--o{ modelos : fornece
-    modelos ||--o{ automoveis_vendidos : "dá origem a"
-    vendedores ||--o{ contratos : cria
-    compradores ||--o{ contratos : assina
-    automoveis_vendidos ||--o| contratos : "é vendido em"
-    contratos ||--o| entrega : gera
-    fretadores ||--o{ entrega : realiza
-```
 
 ### Tabelas
 
